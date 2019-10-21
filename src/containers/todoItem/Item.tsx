@@ -34,6 +34,7 @@ class Item extends Component<IProps, IState> {
         this.save();
     };
     onEditClick = () => {
+
         this.setState({
             isEdit: true,
             editableValue: this.props.value
@@ -88,7 +89,7 @@ class Item extends Component<IProps, IState> {
         return (
             <Card styles={styles} classes="item">
                 <Checkbox checked={this.props.isDone} onCheckClick={this.onDoneClick}/>
-                <InputField classes="itemInput" disabled={!this.state.isEdit} onChange={(event) => this.onChangeInputFieldHandler(event)}
+                <InputField isEditing={this.state.isEdit} classes="itemInput" disabled={!this.state.isEdit} onChange={(event) => this.onChangeInputFieldHandler(event)}
                             value={this.state.isEdit ? this.state.editableValue : this.props.value} onKeyDown={this.onKeyDown}/>
                 {this.state.isEdit ? <Button type="acceptEdit" onClick={this.onAcceptEditClick}/> :
                     <Button type="edit" onClick={this.onEditClick}/>}

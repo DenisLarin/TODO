@@ -1,5 +1,5 @@
-import * as actions from './actionTypes'
-import {TodoItem} from '../reducers/todo';
+import * as actions from './actionTypes';
+import TodoItem from "../../model/TodoItem";
 
 //сохранить в память
 const saveToLocalStorage = (item: TodoItem) => {

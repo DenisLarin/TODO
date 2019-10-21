@@ -1,10 +1,5 @@
 import * as actions from './../actions/actionTypes';
-
-export interface TodoItem {
-    id: String;
-    value: String;
-    isDone: boolean;
-}
+import TodoItem from "../../model/TodoItem";
 
 interface TodoList {
     status: string;

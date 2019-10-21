@@ -65,6 +65,9 @@ class Item extends Component<IProps, IState> {
         else{
             this.props.editItem(this.props.id, this.state.editableValue);
         }
+        if(this.props.isDone){
+            this.onDoneClick();
+        }
         this.save();
         this.setState({
             isEdit: false,

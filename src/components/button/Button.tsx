@@ -18,6 +18,7 @@ const Button = (props:IProps) => {
     else if(props.type === "acceptEdit"){
         image = tick;
     }
+    console.log(image);
     return (
         <button onClick={props.onClick} className={`button ${props.type}`}><img className="buttonIMG" src={image} alt={props.type}/></button>
     );

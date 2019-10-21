@@ -5,7 +5,6 @@ import InputField from '../../components/inputFields/text/InputField';
 import Checkbox from "../../components/inputFields/checkbox/Checkbox";
 import {connect} from "react-redux";
 import * as actions from './../../store/actions/todoActions'
-import {unwatchFile} from "fs";
 
 interface IProps {
     value: string;

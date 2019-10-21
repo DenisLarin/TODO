@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {CSSTransition, TransitionGroup} from 'react-transition-group'
 import * as actions from './../../store/actions/todoActions';
 import TodoItem from "../../model/TodoItem";
 import Item from "../todoItem/Item";

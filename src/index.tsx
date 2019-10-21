@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {TransitionGroup} from 'react-transition-group'
 import * as serviceWorker from './serviceWorker';
 
 //redux
 import {Provider} from 'react-redux';
-import {createStore, compose, applyMiddleware} from 'redux';
+import {createStore} from 'redux';
 import todoReducer from './store/reducers/todo';
 
-const store = createStore(todoReducer,(window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(todoReducer, (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__());
 const app = (
     <Provider store={store}>
         <App/>

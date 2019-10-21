@@ -1,0 +1,16 @@
+.checkbox{
+    padding: 12px 6px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,.3);
+    background-color: #2c3e50;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tick{
+    width: 100%;
+}

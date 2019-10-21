@@ -1,5 +1,5 @@
 export default interface TodoItem {
-    id: String;
-    value: String;
+    id: string;
+    value: string;
     isDone: boolean;
 }

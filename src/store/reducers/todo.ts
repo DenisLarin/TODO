@@ -1,6 +1,6 @@
 import * as actions from './../actions/actionTypes';
 
-interface TodoItem {
+export interface TodoItem {
     id: String;
     value: String;
     isDone: boolean;

@@ -6,12 +6,13 @@ interface IProps {
     value: string,
     disabled?: boolean
     onKeyDown: (event: React.KeyboardEvent)=>any;
+    classes?: string
 }
 
 const InputField = (props:IProps) => {
 
     return (
-        <input className="inputField" type="text" value={props.value} onChange={props.onChange} placeholder="Ваша задача" disabled={props.disabled} onKeyDown={props.onKeyDown}/>
+        <input className={`inputField ${props.classes}`} type="text" value={props.value} onChange={props.onChange} placeholder="Ваша задача" disabled={props.disabled} onKeyDown={props.onKeyDown}/>
     );
 }
 

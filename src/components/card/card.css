@@ -6,4 +6,19 @@
     border-radius: 5px;
     width: 600px;
     padding: 20px;
+    transition: 0.3s;
+}
+.item{
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+@media (max-width:650px) {
+    .card{
+        width: 300px;
+    }
+    .item{
+        flex-direction: column;
+    }
 }

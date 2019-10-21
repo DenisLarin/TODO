@@ -3,12 +3,13 @@ import './card.css';
 
 interface IProps {
     children: React.ReactNode,
-    styles?: CSSProperties
+    styles?: CSSProperties,
+    classes?: string
 }
 
 const Card = (props: IProps) => {
     return (
-        <div className="card" style={props.styles}>
+        <div className={`card ${props.classes}`} style={props.styles}>
             {props.children}
         </div>
     );

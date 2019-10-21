@@ -22,13 +22,6 @@ interface IState {
     editableValue: string
 }
 
-let styles = {
-    flexDirection: "row",
-    alignItems: "center",
-    marginBottom: "10px",
-    transition: "0.3s",
-} as CSSProperties;
-
 class Item extends Component<IProps, IState> {
     state = {
         isEdit: false,
@@ -86,16 +79,14 @@ class Item extends Component<IProps, IState> {
         }
     };
     render() {
-        if(this.props.isDone){
-            styles = {...styles, opacity: 0.5}
-        }
-        else{
+        let styles = {opacity: '0.5'} as CSSProperties;
+        if(!this.props.isDone){
             styles = {...styles, opacity: 1}
         }
         return (
-            <Card styles={styles}>
+            <Card styles={styles} classes="item">
                 <Checkbox checked={this.props.isDone} onCheckClick={this.onDoneClick}/>
-                <InputField disabled={!this.state.isEdit} onChange={(event) => this.onChangeInputFieldHandler(event)}
+                <InputField classes="itemInput" disabled={!this.state.isEdit} onChange={(event) => this.onChangeInputFieldHandler(event)}
                             value={this.state.isEdit ? this.state.editableValue : this.props.value} onKeyDown={this.onKeyDown}/>
                 {this.state.isEdit ? <Button type="acceptEdit" onClick={this.onAcceptEditClick}/> :
                     <Button type="edit" onClick={this.onEditClick}/>}
